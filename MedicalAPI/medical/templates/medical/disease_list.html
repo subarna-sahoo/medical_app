@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block block_name1 %}
+
+	<h1>Diseases List</h1>
+	<br>
+	<div class="diseases">
+
+	{% for disease in diseases %}
+
+		<div class="disease">
+			<h2><a href="{% url 'medical:detail' DrName=disease.DrName %}">
+			{{ disease.DiseaseName }} :</a></h2>
+			
+			<p><strong>{{ disease.DrName }}</strong> [<i>{{ disease.date }}</i>]</p>
+			
+			<p>{{ disease.sort_symptom }}</p>
+		 
+		</div>
+		{% endfor %}
+	</div>
+
+{% endblock %}

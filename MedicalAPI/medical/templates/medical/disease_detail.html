@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block block_name1 %}
+
+<div class="disease-detail">
+	<div class="disease">
+
+		<img src="{{ disease.profilePicture.url }}">
+		<h1>{{ disease.DiseaseName }}</h1>
+		<br>
+		<h2>{{ disease.DrName }}</h2>
+		<p>{{ disease.symptom }}</p>
+		<p>{{ disease.date }}</p>
+
+	</div>
+</div>
+{% endblock %}
