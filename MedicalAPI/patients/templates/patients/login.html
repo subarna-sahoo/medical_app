@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block block_name1 %}
+ <h1>Log in</h1>
+ <form class="site-form" action="{% url 'patients:login' %}" method="post">
+ 	{% csrf_token %}
+ 	{{ form }}
+ 	<input type="submit" name="" value="Login">
+
+ </form>
+{% endblock %}
